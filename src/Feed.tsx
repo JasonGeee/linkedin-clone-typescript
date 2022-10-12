@@ -1,5 +1,10 @@
 import React from "react";
 import CreateIcon from "@mui/icons-material/Create";
+import InputOption from "./InputOption";
+import ImageIcon from "@mui/icons-material/Image";
+import SmartDisplayIcon from "@mui/icons-material/SmartDisplay";
+import EventIcon from "@mui/icons-material/Event";
+import NewspaperIcon from "@mui/icons-material/Newspaper";
 
 function Feed() {
   return (
@@ -17,7 +22,24 @@ function Feed() {
             </button>
           </form>
         </div>
+        {/* Feed Options */}
+        <div className="flex justify-evenly">
+          <InputOption Icon={ImageIcon} title="Photo" color="text-blue-400" />
+          <InputOption
+            Icon={SmartDisplayIcon}
+            title="Video"
+            color="text-yellow-400"
+          />
+          <InputOption Icon={EventIcon} title="Event" color="text-stone-400" />
+          <InputOption
+            Icon={NewspaperIcon}
+            title="Write Article"
+            color="text-green-700"
+          />
+        </div>
       </div>
+
+      {/* Posts */}
     </div>
   );
 }
