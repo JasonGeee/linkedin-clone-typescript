@@ -35,7 +35,10 @@ function Header() {
         <HeaderOption Icon={WorkIcon} title="Jobs" />
         <HeaderOption Icon={MessageIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-        <HeaderOption Icon={HomeIcon} title="Me" />
+        <HeaderOption
+          avatar="https://avatars.githubusercontent.com/u/70604988?v=4"
+          title="Me"
+        />
         {/* <HeaderOption Icon={HomeIcon} title="Work" />
         <HeaderOption Icon={HomeIcon} title="Learning" /> */}
       </div>
