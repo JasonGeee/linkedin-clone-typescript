@@ -10,7 +10,7 @@ function Sidebar() {
   // };
 
   return (
-    <div className="top-80 sticky flex-initial rounded-lg text-center h-fit">
+    <div className="top-80 sticky flex-[0.2] rounded-lg text-center h-fit">
       {/* sidebar top */}
       <div className="bg-white border-solid border-b-0 rounded-tl-lg rounded-tr-lg border-2 flex flex-col items-center pb-2">
         <img
