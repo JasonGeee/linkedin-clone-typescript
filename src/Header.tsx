@@ -9,7 +9,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 
 function Header() {
   return (
-    <div className="sticky top-0 flex justify-evenly border-b border-slate-300 pt-3 pb-3 w-full z-50">
+    <div className="sticky top-0 flex bg-white justify-evenly border-b border-slate-300 pt-3 pb-3 w-full z-50">
       {/* Header Left */}
       <div className="flex">
         <img
