@@ -24,6 +24,7 @@ function Header() {
           <input
             className="outline-none bg-slate-100 border-none"
             type="text"
+            placeholder="Search"
           />
         </div>
       </div>
