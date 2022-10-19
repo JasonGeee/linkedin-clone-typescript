@@ -3,8 +3,18 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 // import { getAuth, EmailAuthProvider } from "firebase/auth";
 
+interface firebase {
+  apiKey: string;
+  authDomain: string;
+  projectId: string;
+  storageBucket: string;
+  messagingSenderId: string;
+  appId: string;
+  measurementId: string;
+}
+
 // Import the functions you need from the SDKs you need
-const firebaseConfig = {
+const firebaseConfig: firebase = {
   apiKey: "AIzaSyB1ZqQ6iBYtVlnRuxphwjoSwJlKPNLkiPY",
   authDomain: "linkedin-clone-ed5d3.firebaseapp.com",
   projectId: "linkedin-clone-ed5d3",
