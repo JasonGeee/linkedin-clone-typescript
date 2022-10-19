@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 // import { getAuth, EmailAuthProvider } from "firebase/auth";
 
 // Import the functions you need from the SDKs you need
@@ -18,3 +19,4 @@ const app = initializeApp(firebaseConfig);
 
 // Connect to Database in Firestore
 export const db = getFirestore(app);
+export const auth = getAuth();
