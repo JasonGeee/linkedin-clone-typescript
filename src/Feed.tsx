@@ -9,7 +9,6 @@ import Post from "./Post";
 import { db } from "./firebase";
 import {
   addDoc,
-  getDocs,
   collection,
   onSnapshot,
   query,
@@ -56,7 +55,7 @@ function Feed() {
   };
 
   return (
-    <div className="flex-[0.6] my-2 mx-5">
+    <div className="flex-[0.6] my-1.3 mx-5">
       <div className="bg-white p-2.5 pb-5 rounded-xl mb-5">
         {/* Input Field, top of Feed Section */}
         <div className="flex rounded-[30px] p-2.5 pl-4 text-gray-500 border border-solid border-gray-300">
@@ -94,16 +93,6 @@ function Feed() {
       </div>
 
       {/* Posts */}
-      {/* {posts.map(({ id, data: { name, description, message, photoUrl } }) => {
-        return (
-          <Post
-            key={id}
-            name={name}
-            description={description}
-            message={message}
-          />
-        );
-      })} */}
       {posts.map(({ id, name, description, message, photoUrl }) => {
         return (
           <Post
