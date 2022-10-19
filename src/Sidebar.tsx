@@ -1,7 +1,17 @@
 import React from "react";
 import Avatar from "@mui/material/Avatar";
+// import { useSelector } from "react-redux";
+import { selectUser } from "./features/userSlice";
+import { useAppSelector } from "./app/hooks";
+
+// interface User {
+//   [key: string]: any;
+//   user: any | null;
+//   displayName?: any;
+// }
 
 function Sidebar() {
+  const user = useAppSelector(selectUser);
   // const recentItem = ({ topic }: Props) => {
   //   <div className="sidebar_recentItem">
   //     <span className="sidebar_hash">#</span>
@@ -18,9 +28,9 @@ function Sidebar() {
           src="https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2029&q=80"
           alt=""
         />
-        <Avatar className="mb-2.5" />
-        <h2 className="text-lg">Jason Gutierrez</h2>
-        <h4 className="text-gray-400 text-xs">jasonvgutierrez@gmail.com</h4>
+        <Avatar className="mb-2.5" src={user.photoUrl} />
+        <h2 className="text-lg">{user.displayName}</h2>
+        <h4 className="text-gray-400 text-xs">{user.email}</h4>
       </div>
 
       {/* sidebar stats */}

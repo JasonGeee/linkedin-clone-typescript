@@ -16,8 +16,11 @@ import {
   orderBy,
   serverTimestamp,
 } from "firebase/firestore";
+import { useAppSelector } from "./app/hooks";
+import { selectUser } from "./features/userSlice";
 
 function Feed() {
+  const user = useAppSelector(selectUser);
   const [input, setInput] = useState<string>("");
   const [posts, setPosts] = useState<any[]>([]);
 
@@ -42,10 +45,10 @@ function Feed() {
 
     // Add to collections firestore using addDoc
     addDoc(postsCollectionRef, {
-      name: "Jason Gutierrez",
-      description: "This is another TESTTT!",
+      name: user.displayName,
+      description: user.email,
       message: input,
-      photoUrl: "",
+      photoUrl: user.photoUrl || "",
       timestamp: serverTimestamp(),
     });
 

@@ -13,11 +13,11 @@ interface Posts {
   photoUrl?: any;
 }
 
-function Post({ name, description, message }: Posts) {
+function Post({ name, description, message, photoUrl }: Posts) {
   return (
     <div className="bg-white p-4 mb-2.5 rounded-xl">
       <div className="flex mb-2.5">
-        <Avatar />
+        <Avatar src={photoUrl}>{name[0]}</Avatar>
         <div className="ml-2.5">
           <h2>{name}</h2>
           <p className="text-xs text-gray-400">{description}</p>

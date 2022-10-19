@@ -6,8 +6,19 @@ import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import WorkIcon from "@mui/icons-material/Work";
 import MessageIcon from "@mui/icons-material/Message";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { logout, selectUser } from "./features/userSlice";
+import { signOut } from "firebase/auth";
+import { auth } from "./firebase";
+import { useAppDispatch } from "./app/hooks";
 
 function Header() {
+  const dispatch = useAppDispatch();
+
+  const logoutOfApp = () => {
+    dispatch(logout());
+    signOut(auth);
+  };
+
   return (
     <div className="sticky top-0 flex bg-white justify-evenly border-b border-slate-300 pt-3 pb-3 w-full z-50">
       {/* Header Left */}
@@ -36,10 +47,7 @@ function Header() {
         <HeaderOption Icon={WorkIcon} title="Jobs" />
         <HeaderOption Icon={MessageIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-        <HeaderOption
-          avatar="https://avatars.githubusercontent.com/u/70604988?v=4"
-          title="Me"
-        />
+        <HeaderOption avatar={true} title="Me" onClick={logoutOfApp} />
         {/* <HeaderOption Icon={HomeIcon} title="Work" />
         <HeaderOption Icon={HomeIcon} title="Learning" /> */}
       </div>
