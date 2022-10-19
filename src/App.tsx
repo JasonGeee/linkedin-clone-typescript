@@ -8,6 +8,7 @@ import { login, logout, selectUser } from "./features/userSlice";
 import Login from "./Login";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
+import Widgets from "./Widgets";
 
 function App() {
   const user = useSelector(selectUser);
@@ -42,9 +43,10 @@ function App() {
       {!user ? (
         <Login />
       ) : (
-        <div className="flex mt-9 max-w-7xl mx-5">
+        <div className="flex mt-9 mx-5">
           <Sidebar />
           <Feed />
+          <Widgets />
         </div>
       )}
     </div>
