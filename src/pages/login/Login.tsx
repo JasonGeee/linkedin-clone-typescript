@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { auth } from "./firebase";
+import { auth } from "../../setup/firebase";
 import {
   createUserWithEmailAndPassword,
   updateProfile,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { useAppDispatch } from "./app/hooks";
-import { login } from "./features/userSlice";
+import { useAppDispatch } from "../../app/hooks";
+import { login } from "../../features/userSlice";
 
 function Login() {
   const [email, setEmail] = useState<string>("");

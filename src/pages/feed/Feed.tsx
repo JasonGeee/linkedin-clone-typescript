@@ -6,7 +6,7 @@ import SmartDisplayIcon from "@mui/icons-material/SmartDisplay";
 import EventIcon from "@mui/icons-material/Event";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import Post from "./Post";
-import { db } from "./firebase";
+import { db } from "../../setup/firebase";
 import {
   addDoc,
   collection,
@@ -15,8 +15,8 @@ import {
   orderBy,
   serverTimestamp,
 } from "firebase/firestore";
-import { useAppSelector } from "./app/hooks";
-import { selectUser } from "./features/userSlice";
+import { useAppSelector } from "../../app/hooks";
+import { selectUser } from "../../features/userSlice";
 
 function Feed() {
   const user = useAppSelector(selectUser);

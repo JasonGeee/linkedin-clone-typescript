@@ -6,10 +6,10 @@ import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import WorkIcon from "@mui/icons-material/Work";
 import MessageIcon from "@mui/icons-material/Message";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { logout, selectUser } from "./features/userSlice";
+import { logout, selectUser } from "../../features/userSlice";
 import { signOut } from "firebase/auth";
-import { auth } from "./firebase";
-import { useAppDispatch } from "./app/hooks";
+import { auth } from "../../setup/firebase";
+import { useAppDispatch } from "../../app/hooks";
 
 function Header() {
   const dispatch = useAppDispatch();

@@ -1,8 +1,8 @@
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 // import { useSelector } from "react-redux";
-import { selectUser } from "./features/userSlice";
-import { useAppSelector } from "./app/hooks";
+import { selectUser } from "../../features/userSlice";
+import { useAppSelector } from "../../app/hooks";
 
 // interface User {
 //   [key: string]: any;

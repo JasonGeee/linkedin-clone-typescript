@@ -1,7 +1,7 @@
 import React from "react";
 import Avatar from "@mui/material/Avatar";
-import { useAppSelector } from "./app/hooks";
-import { selectUser } from "./features/userSlice";
+import { useAppSelector } from "../../app/hooks";
+import { selectUser } from "../../features/userSlice";
 
 interface Props {
   title: string;
