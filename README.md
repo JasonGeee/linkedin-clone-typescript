@@ -1,6 +1,37 @@
-# Getting Started with Create React App
+# LinkedIn Clone With Typescript and ReactJs
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+
+## Tech Stack
+
+#### Front End
+
+- ReactJs
+- Redux
+- Redux Toolkit
+- Tailwind CSS
+- Typescript
+
+#### Back End
+
+- Firebase
+- Firestore
+- Firebase Authentication
+
+## What I Learned Building LinkedIn Clone
+
+- Redux and Redux Toolkit
+- Typescript and its features with Reactjs and Redux
+- Tailwind CSS and how its implemented with components in Reactjs
+- Firestore Database and Firebase's User Authentication
+- Login and Logout functionality
+
+## Features
+
+- Login and Logout functions
+- Creating a Post
+- Displaying the posts via feed
+- Similar Linkedin Design and Posts/Feed functions
 
 ## Available Scripts
 
